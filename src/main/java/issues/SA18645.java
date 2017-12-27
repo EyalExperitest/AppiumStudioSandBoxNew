@@ -1,0 +1,48 @@
+package main.java.issues;
+
+//package <set your test package>;
+import io.appium.java_client.remote.IOSMobileCapabilityType;
+import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.ios.IOSElement;
+import io.appium.java_client.remote.MobileCapabilityType;
+import org.openqa.selenium.ScreenOrientation;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.By;
+import org.junit.*;
+import java.net.URL;
+import java.net.MalformedURLException;
+
+public class SA18645 {
+    private String reportDirectory = "reports";
+    private String reportFormat = "xml";
+    private String testName = "SA18645";
+    protected IOSDriver<IOSElement> driver = null;
+
+    DesiredCapabilities dc = new DesiredCapabilities();
+
+    @Before
+    public void setUp() throws MalformedURLException {
+        dc.setCapability("reportDirectory", reportDirectory);
+        dc.setCapability("reportFormat", reportFormat);
+        dc.setCapability("testName", testName);
+        dc.setCapability(MobileCapabilityType.UDID, "9d859c70b91377a49293858ac66dd89fec6653f8");
+        dc.setCapability(MobileCapabilityType.APP, "C:\\Users\\eyal.neumann\\AppData\\Roaming\\appiumstudioenterprise\\original-apks\\EriBank.ipa");
+        dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
+        dc.setCapability("instrumentApp", false);
+        driver = new IOSDriver<IOSElement>(new URL("http://localhost:4723/wd/hub"), dc);
+
+    }
+
+    @Test
+    public void testSA18645() {
+        String pageSource1 = driver.getPageSource();
+        driver.findElement(By.xpath("//*[@name='usernameTextField']"));
+        driver.findElement(By.name("usernameTextField"));
+
+    }
+
+    @After
+    public void tearDown() {
+        driver.quit();
+    }
+}

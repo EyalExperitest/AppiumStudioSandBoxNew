@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><test_report>
+<info>
+<test_info>
+<test_status>OK</test_status>
+<time_zone>Israel Standard Time</time_zone>
+<run_started>Sun, 2 Jul 2017 13:34:29</run_started>
+<total_time>38.0</total_time>
+<project/>
+<user>eyal.neumann</user>
+<machine_name>EyalNeumann</machine_name>
+</test_info>
+<device_info>
+<device_name>SM-T813</device_name>
+<manufacture>samsung</manufacture>
+<model>SM-T813</model>
+<os>Android</os>
+<serial_number>d0595c1001b9d9d4</serial_number>
+<version>7.0</version>
+<versionMajor>7.x</versionMajor>
+<screen_size>1536x2048</screen_size>
+</device_info>
+</info>
+<reports>
+<report>
+<text>C:\Users\eyal.neumann\workspace\AppiumStudioSandBoxNew\reports\test7</text>
+<line>Start test AndroidReporterTest</line>
+<status>true</status>
+</report>
+<report>
+<imageFile>0.PNG</imageFile>
+<line>Launch native activity / URL com.experitest.ExperiBank/.LoginActivity</line>
+<status>true</status>
+</report>
+<report>
+<imageFile>1.PNG</imageFile>
+<secondImageFile>2.PNG</secondImageFile>
+<line>Device Action: wake</line>
+<status>true</status>
+</report>
+<report>
+<imageFile>4.PNG</imageFile>
+<secondImageFile>5.PNG</secondImageFile>
+<line>Send text company to element NATIVE:xpath=(//*[@hint='Username'])[1][0]</line>
+<status>true</status>
+</report>
+<report>
+<imageFile>7.PNG</imageFile>
+<secondImageFile>8.PNG</secondImageFile>
+<line>Send text company to element NATIVE:xpath=(//*[@hint='Password'])[1][0]</line>
+<status>true</status>
+</report>
+<report>
+<imageFile>10.PNG</imageFile>
+<secondImageFile>11.PNG</secondImageFile>
+<line>Click 'xpath=(//*[@text='Login'])[1]' in zone NATIVE, index: 0, click count: 1</line>
+<status>true</status>
+</report>
+<report>
+<imageFile>12.PNG</imageFile>
+<line>Set property android.native.nonInstrumented to: false</line>
+<status>true</status>
+</report>
+<report>
+<imageFile>14.PNG</imageFile>
+<text>Your balance is: 1600.00$</text>
+<line>Get text from element WEB:xpath=(/*//*[@nodeName='H1'])[1][0]</line>
+<status>true</status>
+</report>
+<report>
+<imageFile>15.PNG</imageFile>
+<line>Set property android.native.nonInstrumented to: false</line>
+<status>true</status>
+</report>
+<report>
+<imageFile>17.PNG</imageFile>
+<secondImageFile>18.PNG</secondImageFile>
+<line>Click 'xpath=(//*[@text='Make Payment'])[1]' in zone NATIVE, index: 0, click count: 1</line>
+<status>true</status>
+</report>
+<report>
+<imageFile>21.PNG</imageFile>
+<secondImageFile>22.PNG</secondImageFile>
+<line>Send text 09785645 to element NATIVE:xpath=(//*[@hint='Phone'])[1][0]</line>
+<status>true</status>
+</report>
+<report>
+<imageFile>24.PNG</imageFile>
+<secondImageFile>25.PNG</secondImageFile>
+<line>Send text Eyal to element NATIVE:xpath=(//*[@hint='Name'])[1][0]</line>
+<status>true</status>
+</report>
+<report>
+<imageFile>27.PNG</imageFile>
+<secondImageFile>28.PNG</secondImageFile>
+<line>Send text -100 to element NATIVE:xpath=(//*[@hint='Amount'])[1][0]</line>
+<status>true</status>
+</report>
+<report>
+<imageFile>30.PNG</imageFile>
+<secondImageFile>31.PNG</secondImageFile>
+<line>Click 'xpath=(//*[@text='Select'])[1]' in zone NATIVE, index: 0, click count: 1</line>
+<status>true</status>
+</report>
+<report>
+<imageFile>34.PNG</imageFile>
+<secondImageFile>35.PNG</secondImageFile>
+<line>Click 'xpath=(//*[@text='USA'])[1]' in zone NATIVE, index: 0, click count: 1</line>
+<status>true</status>
+</report>
+<report>
+<imageFile>37.PNG</imageFile>
+<secondImageFile>38.PNG</secondImageFile>
+<line>Click 'xpath=(//*[@text='Send Payment'])[1]' in zone NATIVE, index: 0, click count: 1</line>
+<status>true</status>
+</report>
+<report>
+<imageFile>40.PNG</imageFile>
+<secondImageFile>41.PNG</secondImageFile>
+<line>Click 'xpath=(//*[@text='Yes'])[1]' in zone NATIVE, index: 0, click count: 1</line>
+<status>true</status>
+</report>
+<report>
+<imageFile>43.PNG</imageFile>
+<secondImageFile>44.PNG</secondImageFile>
+<line>Click 'xpath=(//*[@text='Logout'])[1]' in zone NATIVE, index: 0, click count: 1</line>
+<status>true</status>
+</report>
+<report>
+<imageFile>45.PNG</imageFile>
+<line>End Test</line>
+<status>true</status>
+</report>
+</reports>
+</test_report>

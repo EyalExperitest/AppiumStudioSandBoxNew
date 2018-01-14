@@ -67,7 +67,7 @@ public class SA19132B {
         //new WebDriverWait(driver, 120).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@accessibilityLabel='logoutButton']")));
         //driver.findElement(By.xpath("//*[@accessibilityLabel='logoutButton']")).click();
         //Object result3 = driver.executeScript("client:client.getMonitorsData(\"\")");
-        client.getMonitorsData("");
+        //client.getMonitorsData("");
     }
 
     @After

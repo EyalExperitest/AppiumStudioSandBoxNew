@@ -25,6 +25,8 @@ dependencies {
     //compile group: 'io.appium', name: 'java-client', version: '5.0.0-BETA1'
     compile group: 'io.appium', name: 'java-client', version: '5.0.4'
 
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+
     compile files('jars/manager-client-11.0.jar')
     compile files('jars/manager-client-api-11.0.1.jar')
     compile files('jars/appium-seetest-extension-11.4.jar')

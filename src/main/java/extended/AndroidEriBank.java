@@ -110,8 +110,8 @@ public class AndroidEriBank {
     @Test@Ignore
     public void testEriBankRunNativeAPICall() {
         SeeTestClient client = new SeeTestClient(driver);
-        String str0 = client.runNativeAPICall("NATIVE", "xpath=//*[@text='Login']", 0, "view.setText(\"LOGIN\");");
-        System.out.println("str0 : "+str0);
+        //String str0 = client.runNativeAPICall("NATIVE", "xpath=//*[@text='Login']", 0, "view.setText(\"LOGIN\");");
+        //System.out.println("str0 : "+str0);
         client.click("NATIVE", "text=LOGIN", 0, 1);
     }
     @Test@Ignore
@@ -119,7 +119,7 @@ public class AndroidEriBank {
         SeeTestClient client = new SeeTestClient(driver);
         String deviceName = client.getDeviceProperty("device.name");
         System.out.println("Device Name : "+deviceName);
-        client.collectSupportData("C:\\Users\\eyal.neumann\\workspace\\AppiumStudioSandBoxNew\\SupportData\\supportData.zip","",deviceName,"Scenario","Expected","Actual");
+        //client.collectSupportData("C:\\Users\\eyal.neumann\\workspace\\AppiumStudioSandBoxNew\\SupportData\\supportData.zip","",deviceName,"Scenario","Expected","Actual");
     }
     @Test@Ignore
     public void testEriBankLog() {

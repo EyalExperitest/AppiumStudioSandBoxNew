@@ -7,8 +7,9 @@ import java.net.MalformedURLException;
 
 public class LongRunTest {
 
-    public static final int ITERATIONS = 2;
-    public static final int TIME = 1000 * 60 * 1;
+    public static final int ITERATIONS = 1;
+//    public static final int TIME = 6*60 * 60 * 1000;
+    public static final int TIME = 2 * 60 * 1000;
     private Thread[] androidThreads;
     private Thread[] iOSThreads;
 

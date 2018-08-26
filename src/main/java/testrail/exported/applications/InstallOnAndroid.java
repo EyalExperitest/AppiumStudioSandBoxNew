@@ -26,7 +26,7 @@ public class InstallOnAndroid {
         dc.setCapability("reportDirectory", reportDirectory);
         dc.setCapability("reportFormat", reportFormat);
         dc.setCapability("testName", testName);
-        dc.setCapability(MobileCapabilityType.UDID, "015d28568f541e0f");
+        dc.setCapability(MobileCapabilityType.UDID, "CB5A2BSDEE");
         driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), dc);
     }
 

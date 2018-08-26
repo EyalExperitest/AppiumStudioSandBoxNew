@@ -16,6 +16,11 @@ import java.net.MalformedURLException;
 import java.util.logging.Level;
 
 public class SA20513 {
+    static {
+        System.getProperties().setProperty("javax.net.ssl.trustStore","C:\\Users\\eyal.neumann\\Documents\\keys3\\truststore.jks");
+        System.getProperties().setProperty("javax.net.ssl.trustStorePassword","");
+    }
+
     private String reportDirectory = "reports";
     private String reportFormat = "xml";
     private String testName = "SA20513";

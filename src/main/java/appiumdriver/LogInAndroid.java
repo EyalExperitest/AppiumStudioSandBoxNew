@@ -21,7 +21,7 @@ public class LogInAndroid {
     private String reportDirectory = "reports";
     private String reportFormat = "xml";
     private String testName = "LogInAndroid";
-    protected AppiumDriver<WebElement> driver = null;
+    protected AppiumDriver driver = null;
 
     DesiredCapabilities dc = new DesiredCapabilities();
 
@@ -31,11 +31,11 @@ public class LogInAndroid {
         dc.setCapability("reportFormat", reportFormat);
         dc.setCapability("testName", testName);
         //dc.setCapability(MobileCapabilityType.UDID, "91df46f3");
-        dc.setCapability(MobileCapabilityType.APP, "/Users/Mac10/appiumstudioenterprise/apk/com.experitest.ExperiBank.LoginActivity.2.apk");
+        dc.setCapability(MobileCapabilityType.APP, "C:\\Users\\eyal.neumann\\AppData\\Roaming\\appiumstudioenterprise\\apk\\com.experitest.ExperiBank.LoginActivity.2.apk");
         dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
         dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
         dc.setCapability("instrumentApp", true);
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), dc);
+        driver = new AppiumDriver<>(new URL("http://localhost:4723/wd/hub"), dc);
         driver.setLogLevel(Level.INFO);
     }
 

@@ -60,7 +60,7 @@ public class AppiumTest2 {
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setCapability("reportDirectory", "reports");
 		dc.setCapability("reportFormat", "xml");
-		dc.setCapability("testName", "AppiumTest 2");
+		dc.setCapability("testName", "AppiumTestdontGoHomeOnQuit 2");
 		dc.setCapability(MobileCapabilityType.UDID, "1d3e36fba9e9d23918ca4f4b8760d0c10ce24b3b");
 		dc.setCapability("user", user);
 		// In case your user is assigned to a single project leave empty, otherwise please specify the project name

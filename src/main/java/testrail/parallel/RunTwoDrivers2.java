@@ -13,9 +13,9 @@ import java.net.URL;
 import java.net.MalformedURLException;
 
 public class RunTwoDrivers2 {
-  private static final int ITERATIONS = 10;
+  private static final int ITERATIONS = 200;
 private String host = "localhost";
-  private int port = 8889;
+  private int port = 4723;
   private String reportDirectory = "reports";
   private String reportFormat = "xml";
   private String testName = "Run Two Drivers";
@@ -43,7 +43,7 @@ private String host = "localhost";
       androidDC.setCapability("reportDirectory", reportDirectory);
       androidDC.setCapability("reportFormat", reportFormat);
       androidDC.setCapability("testName", testName +"Android");
-      androidDC.setCapability(MobileCapabilityType.UDID, "FA549YJ00800");
+      androidDC.setCapability(MobileCapabilityType.UDID, "aa3e9a95");
 
       
       aSIOSDriverFactory =new ASIOSDriverFactory(url, iosDC);

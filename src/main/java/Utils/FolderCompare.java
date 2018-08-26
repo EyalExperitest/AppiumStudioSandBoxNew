@@ -9,7 +9,7 @@ public class FolderCompare {
    private ArrayList<String> addedFiles;
 
    public static void main(String[] args) {
-      FolderCompare fc = new FolderCompare("C:\\Program Files (x86)\\Experitest\\AppiumStudio_11_3","C:\\Program Files (x86)\\Experitest\\AppiumStudio_11_4");
+      FolderCompare fc = new FolderCompare("C:\\Program Files (x86)\\Experitest\\AppiumStudio_11_4","C:\\Program Files (x86)\\Experitest\\AppiumStudio_11_5");
       System.out.println(fc.getAddedFileNUmber() +" New Files:");
       ArrayList<String> stringArrayAdded = fc.getAddedFiles();
       for (int i = 0; i < stringArrayAdded.size(); i++) {

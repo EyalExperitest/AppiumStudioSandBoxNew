@@ -29,7 +29,7 @@ public class LaunchApplicationsOnAndroid {
         dc.setCapability("reportDirectory", reportDirectory);
         dc.setCapability("reportFormat", reportFormat);
         dc.setCapability("testName", testName);
-        dc.setCapability(MobileCapabilityType.UDID, "3801a15c53ba3300");
+        dc.setCapability(MobileCapabilityType.UDID, "220990352c057ece");
         dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
         dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
         driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), dc);

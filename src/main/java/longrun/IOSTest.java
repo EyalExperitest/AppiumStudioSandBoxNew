@@ -51,27 +51,29 @@ public class IOSTest implements Runnable {
 
         try {
             //driver = new IOSDriver(new URL("https://qacloud.experitest.com:443/wd/hub"), dc);
-            driver = new IOSDriver(new URL("http://192.168.2.150/wd/hub"), dc);
+            //driver = new IOSDriver(new URL("http://192.168.2.150/wd/hub"), dc);
+            driver = new IOSDriver<>(new URL("http://localhost:4723/wd/hub"), dc);
+
             //driver = new IOSDriver(new URL("http://mastercloud.experitest.local/wd/hub"), dc);
             try {
                 String pageSource1 = driver.getPageSource();
                 System.out.println(pageSource1);
 
-//                driver.findElement(By.xpath("//*[@accessibilityLabel='Buttons']")).click();
-//                driver.findElement(By.xpath("(//*[@text='Buttons']/*[@text='Back'])[1]")).click();
-//                driver.findElement(By.xpath("//*[@accessibilityLabel='TextFields']")).click();
-//                driver.findElement(By.xpath("(//*[@class='UIATable']/*/*[@placeholder='<enter text>'])[1]")).sendKeys("Test " + index);
-//                driver.findElement(By.xpath("(//*[@text='TextFields']/*[@text='Back'])[1]")).click();
-//
-//                driver.get("https://www.wikipedia.org/");
-//                String pageSource2 = driver.getPageSource();
-//                //System.out.println(pageSource2);
-//                driver.findElement(By.linkText("English")).click();
-//                driver.findElement(By.id("mw-mf-main-menu-button")).click();
-//                driver.findElement(By.linkText("Random")).click();
-//                new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.id("mw-mf-main-menu-button")));
-//                driver.findElement(By.id("mw-mf-main-menu-button")).click();
-//                driver.findElement(By.linkText("Random")).click();
+                driver.findElement(By.xpath("//*[@accessibilityLabel='Buttons']")).click();
+                driver.findElement(By.xpath("(//*[@text='Buttons']/*[@text='Back'])[1]")).click();
+                driver.findElement(By.xpath("//*[@accessibilityLabel='TextFields']")).click();
+                driver.findElement(By.xpath("(//*[@class='UIATable']/*/*[@placeholder='<enter text>'])[1]")).sendKeys("Test " + index);
+                driver.findElement(By.xpath("(//*[@text='TextFields']/*[@text='Back'])[1]")).click();
+
+                driver.get("https://www.wikipedia.org/");
+                String pageSource2 = driver.getPageSource();
+                //System.out.println(pageSource2);
+                driver.findElement(By.linkText("English")).click();
+                driver.findElement(By.id("mw-mf-main-menu-button")).click();
+                driver.findElement(By.linkText("Random")).click();
+                new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.id("mw-mf-main-menu-button")));
+                driver.findElement(By.id("mw-mf-main-menu-button")).click();
+                driver.findElement(By.linkText("Random")).click();
 
 
             } catch (Exception e1) {

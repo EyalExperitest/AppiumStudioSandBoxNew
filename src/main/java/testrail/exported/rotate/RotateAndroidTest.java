@@ -29,7 +29,7 @@ public class RotateAndroidTest {
         dc.setCapability("reportDirectory", reportDirectory);
         dc.setCapability("reportFormat", reportFormat);
         dc.setCapability("testName", testName);
-        dc.setCapability(MobileCapabilityType.UDID, "CB5A25AM17");
+        dc.setCapability(MobileCapabilityType.UDID, "CB5A2BSDEE");
         dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
         dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
         driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), dc);

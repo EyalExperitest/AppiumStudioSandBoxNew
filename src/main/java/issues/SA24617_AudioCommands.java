@@ -44,13 +44,16 @@ public class SA24617_AudioCommands {
         client.click("NATIVE", "xpath=//*[@contentDescription='Record']", 0, 1);
         //client.startAudioPlay("C:\\\\Users\\\\eilon.grodsky\\\\Downloads\\\\FFVII_Victory_Fanfare_Ringtone_Dracotonis_.wav");
         client.startAudioPlay("C:\\Users\\eyal.neumann\\Music\\FFVII_Victory_Fanfare_Ringtone_Dracotonis_.wav");
-        //client.waitForAudioPlayEnd();
-        client.sleep(10000);
+//        client.waitForAudioPlayEnd(1000);
+        client.sleep(1000);
+        client.stopAudioPlay();
+        System.out.println("Stopped");
+
         client.click("NATIVE", "xpath=//*[@id='recorder_control_stop_button']", 0, 1);
         client.click("NATIVE", "xpath=//*[@id='listrow_voiceclip']", 0, 1);
         //String uploadFile = client.uploadFile("C:\\Users\\eyal.neumann\\Music\\Recording001.wav");
 //        System.out.println("uploadFile:"+uploadFile);
-          client.startAudioRecording("C:\\Users\\eyal.neumann\\Music\\Recording00025.wav");
+          //client.startAudioRecording("C:\\Users\\eyal.neumann\\Music\\Recording00026.wav");
         //client.startAudioRecording("C:\\\\Users\\\\eilon.grodsky\\\\Downloads\\\\Recording0022.wav");
 //        if(client.waitForElement("NATIVE", "xpath=//*[@id='player_duration']", 0, 10000)){
 //            // If statement
@@ -58,9 +61,9 @@ public class SA24617_AudioCommands {
 //        if(client.waitForElementToVanish("NATIVE", "xpath=//*[@id='player_duration']", 0, 10000)){
 //            // If statement
 //        }
-        client.sleep(12000);
+        client.sleep(10000);
 
-        client.stopAudioRecording();
+        //client.stopAudioRecording();
         System.out.println("Done");
 
 

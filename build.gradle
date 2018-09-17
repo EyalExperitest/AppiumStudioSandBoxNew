@@ -9,6 +9,9 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    maven {
+        url "https://cloud.experitest.com/repo/"
+    }
 }
 
 
@@ -35,6 +38,13 @@ dependencies {
 //  compile files('jars/appium-seetest-extension-11.7.jar')
     compile files('C:/Program Files (x86)/Experitest/SeeTest_Trunk/clients/appium/java/appium-seetest-extension-12.1.jar"')
     compile files('C:/Program Files (x86)/Experitest/SeeTest_Trunk/clients/appium/java/appium-seetest-extension-12.1-javadoc.zip"')
+//    compile 'com.experitest:seetest-client:11.9'
+    //compile group: 'com.experitest', name: 'seetest-client', version: '12.0'
+    //compile 'com.experitest:appium-seetest-extension:11.9'
+//    compile group: 'com.experitest', name: 'seetest-client', version: '12.0'
+//    compile group: 'com.experitest', name: 'appium-seetest-extension', version: '12.0'
+
+
     compile files('C:/Program Files (x86)/Experitest/SeeTest_Trunk/clients/java/imageClient.jar')
 
     //compile files('C:/Program Files (x86)/Experitest/SeeTest_11_6/clients/appium/java/appium-seetest-extension-11.6.jar"')

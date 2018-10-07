@@ -2,7 +2,7 @@ package main.java.Utils;
 
 public class TimeMeasure {
 
-    long t0;
+    private long t0;
     public TimeMeasure(){
         t0=System.currentTimeMillis();
     }
@@ -10,12 +10,19 @@ public class TimeMeasure {
 
     public long get(){
         long t1 =System.currentTimeMillis();
+//        System.out.println("T1:"+t1);
+//        System.out.println("T0:"+t0);
+        long dt = t1 - t0;
+//        System.out.println("DT:"+dt);
 
-        return t1-t0;
+        return dt;
 
     }
     public void set(){
-        t0=System.currentTimeMillis();
+
+        this.t0=System.currentTimeMillis();
+        //System.out.println("T0:"+t0);
+
     }
 
 

@@ -41,8 +41,9 @@ public class ScreenshotLongRunTest {
     private static final String VERSION ="12 1 3978";
 
 //    public static final String FILE_NAME = "AndroidPerformanceTestGridAutomation_Cloud_12_1_3978_50_Tests_File_007.csv";
-    public static final String FILE_NAME = "IOSPerformanceTestGridAutomation_Cloud_12_1_4015_210_Tests_File_017.csv";
-    public static final int ITERATIONS = 10;
+    public static final String FILE_NAME = "IOSPerformanceTestGridAutomation_Cloud_12_1_4040_1_Tests_File_022.csv";
+
+    public static final int ITERATIONS = 2;
 //    public static final String ANDROID_DEVICE_ID = "PMF4C17807017153";
     public static final String ANDROID_DEVICE_ID = "32e0d2a20377e920";
     public static final String IOS_DEVICE_ID = "36f0a41a8fca9263c1f977b915dcb5668a0b83fc";
@@ -55,7 +56,7 @@ public class ScreenshotLongRunTest {
     private String reportDirectory = "reports\\EriBank Appium Test";
 //    private String accessKey = "eyJ4cC51Ijo3LCJ4cC5wIjoyLCJ4cC5tIjoiTUEiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE4Mzk5MTMxMjEsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.NDxf8DjL1TrXuFw6RpbLOBxTn0hVVPUCo3xc7xWknEw";
 //    private String accessKey = "eyJ4cC51IjoxLCJ4cC5wIjoyLCJ4cC5tIjoiTVRVek56RTVOVE01TXpVNU5BIiwiYWxnIjoiSFMyNTYifQ.eyJleHAiOjE4NTI1NTUzOTQsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.fwhIfssRWlme8DInuNu6tDuV0ezd-OyUURyx6KVdfHg";
-    private String accessKey = "eyJ4cC51IjoxLCJ4cC5wIjoyLCJ4cC5tIjoiTVRVek9EQXpNelF5TURrNE53IiwiYWxnIjoiSFMyNTYifQ.eyJleHAiOjE4NTMzOTM0MjIsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.PrFqZ4xXL3Eg85cWqNoPkCrOPypq8SN4C3uIkjdwpeg";
+    private String accessKey = "eyJ4cC51IjoxLCJ4cC5wIjoyLCJ4cC5tIjoiTVRVek9UQXdPRGd5TkRjME13IiwiYWxnIjoiSFMyNTYifQ.eyJleHAiOjE4NTQzNjg4MjQsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.eP-0E-eqPkzSWCEhl_6nkidJDltRCMMib4jusr1lcc4";
     private String reportFormat = "xml";
 //    private String testName = "EriBank Appium Test";
 
@@ -81,7 +82,7 @@ public class ScreenshotLongRunTest {
         //DesiredCapabilities dc = setDesiredCapabilitiesAndroidEriBankTest(takeScreenShots);
 
         for (int i = 0; i< ITERATIONS; i++) {
-            takeScreenShots = (i%2==0);//=true;//false;//
+            takeScreenShots =(i%2==0);//=false;//=true;//
             System.out.println("*********************************************************************");
             String takeScreenShotsString = takeScreenShots ? "With ScreenShots" : "Without ScreenShots";
 
@@ -91,8 +92,8 @@ public class ScreenshotLongRunTest {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            try {
-                runEriBankTest(setDesiredCapabilitiesAndroidEriBankTest(takeScreenShots),commandsMonitor, takeScreenShots);
+            /*try {
+                runAndroidEriBankTest(setDesiredCapabilitiesAndroidEriBankTest(takeScreenShots),commandsMonitor, takeScreenShots);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -105,7 +106,7 @@ public class ScreenshotLongRunTest {
                 runAndroidTestChrome(setDesiredCapabilitiesChrome(takeScreenShots),commandsMonitor,takeScreenShots);
             } catch (Exception e) {
                 e.printStackTrace();
-            }
+            }*/
 
 
 
@@ -199,7 +200,7 @@ public class ScreenshotLongRunTest {
     }
 
 
-    private void runEriBankTest( DesiredCapabilities dc,CommandsMonitor commandsMonitor, boolean takeScreenShots) throws MalformedURLException {
+    private void runAndroidEriBankTest(DesiredCapabilities dc, CommandsMonitor commandsMonitor, boolean takeScreenShots) throws MalformedURLException {
         TimeMeasure commandTimeMeasure =new TimeMeasure();
         TimeMeasure totalTimeMeasure =new TimeMeasure();
         AndroidDriver<AndroidElement> driver = null;

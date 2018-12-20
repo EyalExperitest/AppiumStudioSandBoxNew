@@ -3,7 +3,9 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-support/3.6.0/b6240199295f6177ee539e51613369e633bc4ec6/selenium-support-3.6.0.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-support/3.6.0/3260ffe94ce1210d4cef80d675577abfa3e04289/selenium-support-3.6.0-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-support/3.6.0/bbfd2e1ad9d7a065f25948d0f48389ef8a2e7610/selenium-support-3.6.0-sources.jar!/" />
     </SOURCES>

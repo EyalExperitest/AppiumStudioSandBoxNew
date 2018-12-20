@@ -3,7 +3,9 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-opera-driver/3.6.0/c0bf93b515070cee4a1f01945830d97080337ecf/selenium-opera-driver-3.6.0.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-opera-driver/3.6.0/b9e3bfcf16b38d7c50daf246c79d6c7d1c6895db/selenium-opera-driver-3.6.0-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-opera-driver/3.6.0/54707e0c0f60286400c6f03bdc68badf21641fd5/selenium-opera-driver-3.6.0-sources.jar!/" />
     </SOURCES>

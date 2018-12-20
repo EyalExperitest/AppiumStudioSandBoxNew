@@ -26,29 +26,26 @@ sourceSets {
 
 dependencies {
     compile group: 'junit', name: 'junit', version: '4.12'
-    //compile group: 'io.appium', name: 'java-client', version: '4.1.2'
-    //compile group: 'io.appium', name: 'java-client', version: '5.0.0-BETA1'
     compile group: 'io.appium', name: 'java-client', version: '5.0.4'
     compile group: 'org.webjars.npm', name: 'css-in-js-utils', version: '2.0.0'
     compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    compile 'org.junit.jupiter:junit-jupiter-api:5.2.0'
 
     compile files('jars/manager-client-11.0.jar')
     compile files('jars/manager-client-api-11.0.1.jar')
-//  compile files('jars/appium-seetest-extension-11.8.jar')
-//  compile files('jars/appium-seetest-extension-11.7.jar')
-    compile files('C:/Program Files (x86)/Experitest/SeeTest_Trunk/clients/appium/java/appium-seetest-extension-12.1.jar"')
-    compile files('C:/Program Files (x86)/Experitest/SeeTest_Trunk/clients/appium/java/appium-seetest-extension-12.1-javadoc.zip"')
-//    compile 'com.experitest:seetest-client:11.9'
-    //compile group: 'com.experitest', name: 'seetest-client', version: '12.0'
-    //compile 'com.experitest:appium-seetest-extension:11.9'
-//    compile group: 'com.experitest', name: 'seetest-client', version: '12.0'
-//    compile group: 'com.experitest', name: 'appium-seetest-extension', version: '12.0'
+    compile fileTree(include: ['*.jar'], dir: 'C:/Program Files (x86)/Experitest/SeeTest_Trunk/clients/reporter/java')
 
+    //compile group: 'com.experitest', name: 'appium-seetest-extension', version: '+'
+
+    //compile fileTree(include: ['*.jar'], dir: 'C:/Users/eyal.neumann/Downloads/Clients/12 2 757/reporter')
+    //compile fileTree(include: ['*.jar'], dir: 'C:/Users/eyal.neumann/Downloads/Clients/12 2 758/reporter')
 
     compile files('C:/Program Files (x86)/Experitest/SeeTest_Trunk/clients/java/imageClient.jar')
+    compile files('C:/Program Files (x86)/Experitest/SeeTest_Trunk/clients/appium/java/appium-seetest-extension-12.2.jar"')
 
-    //compile files('C:/Program Files (x86)/Experitest/SeeTest_11_6/clients/appium/java/appium-seetest-extension-11.6.jar"')
-    //compile files('C:/Users/eyal.neumann/Downloads/Appium Client 673/appium-seetest-extension-12.1.jar')
+
+    //compile files('C:/Program Files (x86)/Experitest/SeeTest/clients/appium/java/appium-seetest-extension-12.1.jar"')
+//
 
 
 

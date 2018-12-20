@@ -19,11 +19,15 @@ import java.util.logging.Level;
 public class InstrumentedClickAfterSwipe {
     private String reportDirectory = "reports";
     private String reportFormat = "xml";
-    private String testName = "Instrumented Click After Swipe With or W/O Screenshots";
+    private String testName = "Instrumented Click After Swipe With Screenshots";
 
     protected IOSDriver<IOSElement> driver = null;
-    private String accessKey = "eyJ4cC51IjoxLCJ4cC5wIjoyLCJ4cC5tIjoiTVRVek9UQXdPRGd5TkRjME13IiwiYWxnIjoiSFMyNTYifQ.eyJleHAiOjE4NTQzNjg4MjQsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.eP-0E-eqPkzSWCEhl_6nkidJDltRCMMib4jusr1lcc4";
+    private String accessKey = "eyJ4cC51IjoxLCJ4cC5wIjoyLCJ4cC5tIjoiTVRVek9UZzBOalk1TXpRNE1RIiwiYWxnIjoiSFMyNTYifQ.eyJleHAiOjE4NTUyMDY2OTQsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.jQ-hUlVFFKhhySUsskeOrsa6HWyDjpuzR5K735WSOfo";
+    static {
+        System.getProperties().setProperty("javax.net.ssl.trustStore","C:\\Users\\eyal.neumann\\Documents\\keys3\\truststore.jks");
+        System.getProperties().setProperty("javax.net.ssl.trustStorePassword","");
 
+    }
     DesiredCapabilities dc = new DesiredCapabilities();
 
     @BeforeMethod
@@ -35,10 +39,12 @@ public class InstrumentedClickAfterSwipe {
         dc.setCapability(MobileCapabilityType.UDID, "36f0a41a8fca9263c1f977b915dcb5668a0b83fc");
         dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
         dc.setCapability("instrumentApp", true);
-        dc.setCapability("takeScreenshots", true);
+        dc.setCapability("takeScreenshots", false);
 
 //        driver = new IOSDriver<>(new URL("http://localhost:4723/wd/hub"), dc);
-        driver = new IOSDriver<>(new URL("http://eyalneumann.experitest.local:8090/wd/hub"), dc);
+//        driver = new IOSDriver<>(new URL("https://eyalneumann.experitest.local:8091/wd/hub"), dc);
+        driver = new IOSDriver<>(new URL("http://localhost:4723/wd/hub"), dc);
+
 
         //driver.setLogLevel(Level.INFO);
     }
@@ -49,13 +55,20 @@ public class InstrumentedClickAfterSwipe {
         driver.findElement(By.linkText("Username")).sendKeys("company");
         driver.findElement(By.linkText("Password")).sendKeys("company");
         driver.findElement(By.linkText("Login")).click();
+
         driver.findElement(By.linkText("Make Payment")).click();
+
+        try {
+            driver.findElement(By.linkText("Select"));
+        } catch (Exception e) {
+            driver.findElement(By.linkText("Make Payment")).click();
+        }
 
 
         int tries = 10;
-        for (int j=1;j<11;j++) {
+        for (int j=16;j<20;j++) {
             int fails=0;
-            int millis = 100 * j;
+            int millis = (100 * j);
             for (int i = 0; i< tries; i++) {
                 try {
                     driver.findElement(By.linkText("Select")).click();
@@ -63,6 +76,7 @@ public class InstrumentedClickAfterSwipe {
                     Thread.sleep(millis);
                     new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.linkText("South Africa")));
                     driver.findElement(By.linkText("South Africa")).click();
+
                     driver.findElement(By.linkText("Select"));
                     driver.findElement(By.xpath("//*[@text='South Africa' and @class='UITextField']"));
                     //System.out.println("Element Found");

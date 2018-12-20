@@ -37,16 +37,16 @@ import java.util.TreeSet;
 
 
 public class ScreenshotLongRunTest {
-    public static final String HOST ="http://eyalneumann.experitest.local:8090/wd/hub";//https://mastercloud.experitest.com:443/wd/hub";// "http://localhost:4723/wd/hub";
-    private static final String VERSION ="12 1 3978";
+//    public static final String HOST ="http://eyalneumann.experitest.local:8090/wd/hub";//https://mastercloud.experitest.com:443/wd/hub";// "http://localhost:4723/wd/hub";
+    public static final String HOST ="https://eyalneumann.experitest.local:8091/wd/hub";//https://mastercloud.experitest.com:443/wd/hub";// "http://localhost:4723/wd/hub";
+    private static final String VERSION ="12 2 4067";
 
-//    public static final String FILE_NAME = "AndroidPerformanceTestGridAutomation_Cloud_12_1_3978_50_Tests_File_007.csv";
-    public static final String FILE_NAME = "IOSPerformanceTestGridAutomation_Cloud_12_1_4040_1_Tests_File_022.csv";
+    public static final String FILE_NAME = "PerformanceTestGridAutomation_Cloud_11_9_128_10_Tests_File_00001.csv";
 
-    public static final int ITERATIONS = 2;
+    public static final int ITERATIONS = 50;
 //    public static final String ANDROID_DEVICE_ID = "PMF4C17807017153";
     public static final String ANDROID_DEVICE_ID = "32e0d2a20377e920";
-    public static final String IOS_DEVICE_ID = "36f0a41a8fca9263c1f977b915dcb5668a0b83fc";
+    public static final String IOS_DEVICE_ID = "00d064b580b7e36184819a9ce668f8c9f1d2413f";
 
     private static final boolean SET_LOF_FLAG =false;
     public static final int WEB_ELEMENT_ITERATIONS = 5;
@@ -54,10 +54,8 @@ public class ScreenshotLongRunTest {
     private static final int WEB_SWIPE =5 ;
     private static final int SEND_WEB_TEXT = 5;
     private String reportDirectory = "reports\\EriBank Appium Test";
-//    private String accessKey = "eyJ4cC51Ijo3LCJ4cC5wIjoyLCJ4cC5tIjoiTUEiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE4Mzk5MTMxMjEsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.NDxf8DjL1TrXuFw6RpbLOBxTn0hVVPUCo3xc7xWknEw";
-//    private String accessKey = "eyJ4cC51IjoxLCJ4cC5wIjoyLCJ4cC5tIjoiTVRVek56RTVOVE01TXpVNU5BIiwiYWxnIjoiSFMyNTYifQ.eyJleHAiOjE4NTI1NTUzOTQsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.fwhIfssRWlme8DInuNu6tDuV0ezd-OyUURyx6KVdfHg";
-    private String accessKey = "eyJ4cC51IjoxLCJ4cC5wIjoyLCJ4cC5tIjoiTVRVek9UQXdPRGd5TkRjME13IiwiYWxnIjoiSFMyNTYifQ.eyJleHAiOjE4NTQzNjg4MjQsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.eP-0E-eqPkzSWCEhl_6nkidJDltRCMMib4jusr1lcc4";
-    private String reportFormat = "xml";
+    private String accessKey = "eyJ4cC51IjoxLCJ4cC5wIjoyLCJ4cC5tIjoiTVRVME5USTVNekEyTURrNU1nIiwiYWxnIjoiSFMyNTYifQ.eyJleHAiOjE4NjA2NTMwNjEsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.3XFCou5E-JXgUrQ1jjISA8bBrPMPOR_hV6Lnd9TewG0";
+    private String reportFormat = "xml,html2";
 //    private String testName = "EriBank Appium Test";
 
     protected CommandsMonitor commandsMonitor;
@@ -66,7 +64,11 @@ public class ScreenshotLongRunTest {
     public void setUp() throws MalformedURLException {
          commandsMonitor =new CommandsMonitor();
     }
+    static {
+        System.getProperties().setProperty("javax.net.ssl.trustStore","C:\\Users\\eyal.neumann\\Documents\\keys3\\truststore.jks");
+        System.getProperties().setProperty("javax.net.ssl.trustStorePassword","");
 
+    }
     @Test
     public void testScreenshotLongRunTest() throws IOException {
 
@@ -82,18 +84,18 @@ public class ScreenshotLongRunTest {
         //DesiredCapabilities dc = setDesiredCapabilitiesAndroidEriBankTest(takeScreenShots);
 
         for (int i = 0; i< ITERATIONS; i++) {
-            takeScreenShots =(i%2==0);//=false;//=true;//
+            takeScreenShots =true;//=(i%2==0);//=false;//
             System.out.println("*********************************************************************");
             String takeScreenShotsString = takeScreenShots ? "With ScreenShots" : "Without ScreenShots";
 
             System.out.println("Starting Iteration "+i+" ("+takeScreenShotsString+")");
             try {
-                runIOSEribankTest(setDesiredCapabilitiesIOSEriBankTest(takeScreenShots),commandsMonitor,takeScreenShots);
+                //runIOSEribankTest(setDesiredCapabilitiesIOSEriBankTest(takeScreenShots),commandsMonitor,takeScreenShots);
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            /*try {
-                runAndroidEriBankTest(setDesiredCapabilitiesAndroidEriBankTest(takeScreenShots),commandsMonitor, takeScreenShots);
+            try {
+                //runAndroidEriBankTest(setDesiredCapabilitiesAndroidEriBankTest(takeScreenShots),commandsMonitor, takeScreenShots);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -103,10 +105,10 @@ public class ScreenshotLongRunTest {
                 e.printStackTrace();
             }
             try {
-                runAndroidTestChrome(setDesiredCapabilitiesChrome(takeScreenShots),commandsMonitor,takeScreenShots);
+                //runAndroidTestChrome(setDesiredCapabilitiesChrome(takeScreenShots),commandsMonitor,takeScreenShots);
             } catch (Exception e) {
                 e.printStackTrace();
-            }*/
+            }
 
 
 

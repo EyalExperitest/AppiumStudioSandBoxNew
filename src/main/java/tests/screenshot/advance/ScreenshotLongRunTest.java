@@ -38,12 +38,12 @@ import java.util.TreeSet;
 
 public class ScreenshotLongRunTest {
 //    public static final String HOST ="http://eyalneumann.experitest.local:8090/wd/hub";//https://mastercloud.experitest.com:443/wd/hub";// "http://localhost:4723/wd/hub";
-    public static final String HOST ="https://eyalneumann.experitest.local:8091/wd/hub";//https://mastercloud.experitest.com:443/wd/hub";// "http://localhost:4723/wd/hub";
+    public static final String HOST ="http://eyalneumann.experitest.local:8090/wd/hub";//https://mastercloud.experitest.com:443/wd/hub";// "http://localhost:4723/wd/hub";
     private static final String VERSION ="12 2 4067";
 
     public static final String FILE_NAME = "PerformanceTestGridAutomation_Cloud_11_9_128_10_Tests_File_00001.csv";
 
-    public static final int ITERATIONS = 50;
+    public static final int ITERATIONS = 10;
 //    public static final String ANDROID_DEVICE_ID = "PMF4C17807017153";
     public static final String ANDROID_DEVICE_ID = "32e0d2a20377e920";
     public static final String IOS_DEVICE_ID = "00d064b580b7e36184819a9ce668f8c9f1d2413f";
